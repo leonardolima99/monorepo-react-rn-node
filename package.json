@@ -1,0 +1,27 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "android:metro": "yarn workspace @monorepo/mobile start",
+    "android:start": "yarn workspace @monorepo/mobile android",
+    "expo:start": "yarn workspace @monorepo/app-expo start",
+    "web:dev": "yarn workspace @monorepo/web dev",
+    "test": "jest"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "author": "Leonardo Lima <leonardo1230987@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@monorepo/eslint-config": "*",
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.2",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.5.2"
+  }
+}
